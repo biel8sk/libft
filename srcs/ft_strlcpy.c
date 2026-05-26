@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:54:49 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/25 21:50:30 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/25 21:25:00 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/25 21:42:18 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *c)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int n)
 {
-	int	count;
+	unsigned int	i;
+	unsigned int	src_len;
 
-	count = 0;
-	while (*c)
+	i = 0;
+	src_len = 0;
+	while (src[src_len])
+		src_len++;
+	if (n == 0)
+		return (src_len);
+	while (src[i] && i < n -1)
 	{
-		count++;
-		c++;
+		dest[i] = src[i];
+		i++;
 	}
-	return (c);
+	if (!dest[i])
+		dest[i] = '\0';
+	return (src_len);
 }
