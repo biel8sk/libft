@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:54:49 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/25 21:50:30 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/26 19:10:17 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 21:35:18 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_strlen(char *c)
+void	*ft_memchr(const void *s, int c, unsigned int n)
 {
-	int	count;
+	int				i;
+	unsigned char	*p;
 
-	count = 0;
-	while (*c)
+	i = 0;
+	p = (unsigned char *) s;
+	while (i < n)
 	{
-		count++;
-		c++;
+		if (p[i] == c)
+			return (p[i]);
+		i++;
 	}
-	return (c);
+	return (0);
 }

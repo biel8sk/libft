@@ -6,11 +6,23 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 21:42:44 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/25 21:56:29 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/26 21:44:15 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *c);
+
+static int	ft_strlen(char *c)
+{
+	int	count;
+
+	count = 0;
+	while (*c)
+	{
+		count++;
+		c++;
+	}
+	return (count);
+}
 
 unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {

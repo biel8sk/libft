@@ -1,20 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:37:28 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/24 20:41:17 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/24 21:42:28 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 21:09:16 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigt(int c);
-
-int	ft_isalpha(int c);
-
-int	ft_isalnum(int c)
+void	*ft_bzero(void *buffer, unsigned int size)
 {
-	return (ft_isalpha(c) || ft_isdigt(c));
+	char			*p;
+	unsigned int	i;
+
+	i = 0;
+	p = buffer;
+	while (i < size)
+	{
+		p[i] = 0;
+		i++;
+	}
+	return (p);
 }

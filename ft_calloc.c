@@ -1,16 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:31:06 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/24 20:37:23 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/26 20:58:05 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 21:08:53 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isdigit(int c)
+#include <stdlib.h>
+
+void	*ft_calloc(unsigned int nmemb, unsigned int size)
 {
-	return (c > 47 && c < 58);
+	return (malloc(nmemb * size));
 }

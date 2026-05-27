@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 21:01:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/24 21:36:42 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/25 19:23:09 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 21:36:27 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *buffer, int c, unsigned int size)
+void	*ft_memcpy(void *dest, const void *src, unsigned int n)
 {
-	char			*p;
+	unsigned char	*p;
+	unsigned char	*p2;
 	unsigned int	i;
 
+	p = (unsigned char *)src;
+	p2 = (unsigned char *)dest;
 	i = 0;
-	p = buffer;
-	while (i < size)
+	while (i < n)
 	{
-		p[i] = c;
+		p2[i] = p[i];
 		i++;
 	}
-	return (p);
+	return (p2);
 }

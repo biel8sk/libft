@@ -1,16 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:51:24 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/24 20:54:19 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/24 21:01:16 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 21:34:48 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_print(int c)
+void	*ft_memset(void *buffer, int c, unsigned int size)
 {
-	return (c >= 32 && c <= 126);
+	char			*p;
+	unsigned int	i;
+
+	i = 0;
+	p = (char *)buffer;
+	while (i < size)
+	{
+		p[i] = c;
+		i++;
+	}
+	return (p);
 }

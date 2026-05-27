@@ -1,16 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:27:00 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/24 20:37:20 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/26 19:53:37 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/26 20:18:24 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_isalpha(int c)
+int	ft_strncmp(char *str1, char *str2, unsigned int n);
+
+char	*ft_strnstr(const char *big, const char *little, unsigned int n)
 {
-	return ((c > 64 && c < 91) || (c > 96 && c < 123));
+	int	i;
+
+	i = 0;
+	if (!*little)
+		return (big);
+	while (big[i])
+	{
+		if (ft_strncmp(big, little, n -1) == 0)
+			return (&big[i]);
+		i++;
+	}
+	return (0);
 }
