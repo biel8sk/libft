@@ -6,24 +6,13 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 18:52:21 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:56:40 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/27 20:36:02 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *c)
-{
-	int	count;
+#include "libft.h"
 
-	count = 0;
-	while (*c)
-	{
-		count++;
-		c++;
-	}
-	return (count);
-}
-
-char	*ft_strrchr(char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
 	int	str_len;
 
@@ -31,7 +20,7 @@ char	*ft_strrchr(char *str, int c)
 	while (str[str_len -1])
 	{
 		if (str[str_len] == c)
-			return (&str[str_len]);
+			return ((char *)&str[str_len]);
 		str_len--;
 	}
 	return (0);

@@ -1,24 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/24 20:54:49 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:26:44 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/05/27 20:40:30 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/05/27 20:45:28 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *c)
-{
-	int	count;
+#include "libft.h"
 
-	count = 0;
-	while (*c)
-	{
-		count++;
-		c++;
-	}
-	return (count);
+char	*ft_strdup(const char *str)
+{
+	unsigned int	len;
+	char			*new;
+
+	len = ft_strlen(str);
+	new = (char *) malloc(len);
+	ft_strlcpy(new, str, len);
+	return (new);
 }

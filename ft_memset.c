@@ -6,17 +6,17 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 21:01:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:34:48 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/27 20:24:14 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	*ft_memset(void *buffer, int c, unsigned int size)
 {
-	char			*p;
+	unsigned char	*p;
 	unsigned int	i;
 
 	i = 0;
-	p = (char *)buffer;
+	p = (unsigned char *)buffer;
 	while (i < size)
 	{
 		p[i] = c;

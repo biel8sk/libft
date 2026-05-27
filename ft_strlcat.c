@@ -6,12 +6,12 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 21:42:44 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:44:15 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/27 20:28:03 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-static int	ft_strlen(char *c)
+static unsigned int	ft_strlen(const char *c)
 {
 	int	count;
 
@@ -24,7 +24,7 @@ static int	ft_strlen(char *c)
 	return (count);
 }
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, const char *src, unsigned int size)
 {
 	unsigned int	i;
 	unsigned int	len_src;

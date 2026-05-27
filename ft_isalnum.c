@@ -6,13 +6,11 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 20:37:28 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:09:40 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/27 20:22:13 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-extern int	ft_isdigt(int c);
-
-extern int	ft_isalpha(int c);
+#include "libft.h"
 
 int	ft_isalnum(int c)
 {
