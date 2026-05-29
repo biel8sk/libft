@@ -6,11 +6,13 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 21:42:28 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:09:16 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:34:46 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_bzero(void *buffer, unsigned int size)
+#include "libft.h"
+
+void	ft_bzero(void *buffer, size_t size)
 {
 	char			*p;
 	unsigned int	i;
@@ -22,5 +24,4 @@ void	*ft_bzero(void *buffer, unsigned int size)
 		p[i] = 0;
 		i++;
 	}
-	return (p);
 }
