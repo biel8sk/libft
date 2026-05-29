@@ -6,15 +6,17 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 19:23:09 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:23:44 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:46:01 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memcpy(void *dest, const void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	*p2;
-	unsigned int	i;
+	size_t			i;
 
 	p = (unsigned char *)src;
 	p2 = (unsigned char *)dest;

@@ -6,16 +6,18 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 20:40:20 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:23:46 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:50:10 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, void *src, unsigned int n)
+#include "libft.h"
+
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*p;
 	unsigned char	*p2;
 	unsigned char	tmp;
-	unsigned int	i;
+	size_t			i;
 
 	p2 = (unsigned char *) dest;
 	p = (unsigned char *) src;

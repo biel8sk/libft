@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:19:06 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/29 19:31:22 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:54:39 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_atoi(const char *str)
 			sign *= -1;
 		i++;
 	}
-	while (is_digit(str[i]))
+	while (ft_isdigit(str[i]))
 	{
 		mount_n = (mount_n * 10) + (str[i] - 48);
 		i++;

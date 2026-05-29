@@ -6,14 +6,16 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/25 21:25:00 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:26:06 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:58:57 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcpy(char *dest, const char *src, unsigned int n)
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 {
-	unsigned int	i;
-	unsigned int	src_len;
+	size_t	i;
+	size_t	src_len;
 
 	i = 0;
 	src_len = 0;

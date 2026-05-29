@@ -6,13 +6,15 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 18:59:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:28:37 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:01:25 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(const char *str1, const char *str2, unsigned int n)
+#include "libft.h"
+
+int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	unsigned int	i;
+	size_t	i;
 
 	i = 0;
 	while (str1[i] && i < n)

@@ -6,11 +6,13 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 20:54:49 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:26:44 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:00:23 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *c)
+#include "libft.h"
+
+size_t	ft_strlen(const char *c)
 {
 	int	count;
 

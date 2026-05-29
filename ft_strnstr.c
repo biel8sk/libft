@@ -6,15 +6,15 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 19:53:37 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:38:49 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 20:02:44 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *big, const char *little, unsigned int n)
+char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	if (!*little)
