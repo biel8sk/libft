@@ -6,11 +6,11 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/24 20:51:24 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/26 21:10:02 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 19:40:31 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_print(int c)
+int	ft_isprint(int c)
 {
 	return (c >= 32 && c <= 126);
 }
