@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 20:08:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/30 19:21:52 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/30 20:01:42 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	i = 0;
 	sub = 0;
-	sub = malloc(len);
+	sub = (char *)malloc(len);
 	if (sub == 0)
 		return (NULL);
 	while (i < len)
