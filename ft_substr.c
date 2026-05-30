@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/29 20:08:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/29 21:36:14 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 22:07:55 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	}
 	sub[i] = '\0';
 	return (sub);
+
+	// TODO: adicionar no make file
 }
