@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 20:15:07 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/29 20:03:30 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/05/29 21:47:11 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n);
 size_t	ft_strlen(const char *str);
 int		ft_strncmp(const char *str1, const char *str2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t n);
-
+char	*ft_strrchr(const char *str, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+int		ft_tolower(int c);
+int		ft_toupper(int c);
 
 #endif
