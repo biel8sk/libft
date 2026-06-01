@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gpires-c <gpires-c@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 19:52:48 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/31 22:25:36 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/01 19:21:15 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,32 +36,33 @@ int	count_delimiter(char const *s, char c)
 	while (*s)
 	{
 		if (*s == c)
-		       count++;
-		s++;	
+			count++;
+		s++;
 	}
 	return (count);
 }
 
-char	**split(char const s, char c)
+char	**split(char const *s, char c)
 {
 	char	**str_splited;
 	char	*str;
-	int	count_c;
-	size_t	i;
-	size_t	j;
+	int		count_c;
+	int		i;
+	int		j;
 
 	i = 0;
+	j = 0;
 	count_c = count_delimiter(s, c);
 	str_splited = (char **)malloc((sizeof(int) * count_c) + 1);
 	while (s[j])
 	{
 		str = alloc_s(&s[j], c);
 		if (s[j +1])
-			s += ft_strlen((char const *)str) + 1;
+			j += ft_strlen((char const *)str) + 1;
 		else
-			s++;
+			j++;
 		str_splited[i] = str;
 	}
-	str_splited[j] = 0;
+	str_splited[i] = 0;
 	return (str_splited);
 }

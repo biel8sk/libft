@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gpires-c <gpires-c@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 22:27:11 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/31 23:38:58 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/01 19:21:15 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,8 @@ int	get_power_ten(int n, int *count)
 		mount *= 10;
 		count ++;
 	}
-	
 	return (mount);
 }
-
-	
 
 char	*ft_itoa(int n)
 {
