@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 22:27:11 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/02 19:52:25 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/02 20:00:21 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,6 @@ char	*ft_itoa(int n)
 	calc_operations_and_set_char(a, n, len);
 	return (a);
 }
-
-
 // int	main(void)
 // {
 // 	#include "stdio.h"
