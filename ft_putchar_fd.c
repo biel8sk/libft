@@ -6,9 +6,11 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 21:32:08 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/02 21:33:43 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 18:46:10 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

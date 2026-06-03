@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/02 21:10:39 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/02 21:19:12 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 18:44:41 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,4 +27,5 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 		i++;
 	}
 	new_s[i] = '\0';
+	return (new_s);
 }
