@@ -6,34 +6,36 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 20:06:23 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/30 21:15:18 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 20:49:27 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtrim(char const *s1, char const *set)
+int	contains(char v, const char *set)
 {
-	size_t	len_trimmed;
-	char	*str_trimmed;
-	int		i;
-	size_t	len_set;
+	while (*set)
+	{
+		if (v == *set)
+			return (v == *set);
+		set++;
+	}
+	return (v == *set);
+}
 
-	len_trimmed = 0;
+char	*ft_strtrim(char const *s, char const *set)
+{
+	char	*str_trimmed;
+	size_t	i;
+	size_t	len;
+
 	i = 0;
-	len_set = ft_strlen(set);
-	while (*s1)
-	{
-		if (*s1 == *set && ft_strncmp(s1, set, len_set))
-			s1++;
-		len_trimmed++;
-	}
-	str_trimmed = (char *)malloc(len_trimmed +1);
-	while (s1[i])
-	{
-		while (s1[i] != *set)
-			str_trimmed[i] = s1[i];
+	len = ft_strlen(s);
+	while (contains(s[i], set))
 		i++;
-	}
+	while (contains(s[len], set))
+		len--;
+	str_trimmed = ft_substr(s, i, len - i);
 	return (str_trimmed);
 }
+
