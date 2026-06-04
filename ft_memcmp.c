@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 19:34:47 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/29 19:44:45 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/04 20:57:09 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return (p1[i] - p2[i]);
 		i++;
 	}
-	return (p1[i] - p2[i]);
+	return (p1[i -1] - p2[i -1]);
 }
