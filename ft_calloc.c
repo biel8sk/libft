@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:58:05 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/30 20:01:53 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/05 20:27:38 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,13 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	if (nmemb == 0 || size == 0 || (nmemb * size) > sizeof(size_t))
+	unsigned char	*mem;
+
+	if (size != 0 && nmemb > __SIZE_MAX__ / size)
 		return (NULL);
-	return (malloc(nmemb * size));
+	mem = (unsigned char *)malloc(nmemb * size);
+	if (!mem)
+		return (NULL);
+	ft_bzero(mem, size * nmemb);
+	return ((void *)mem);
 }
