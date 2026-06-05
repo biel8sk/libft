@@ -6,31 +6,39 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:19:06 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/29 19:54:39 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/05 19:49:34 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	isspace(char c)
+{
+	if (c == 32 || (c > 8 && c < 14) || c == 0)
+		return (1);
+	return (0);
+}
+
 int	ft_atoi(const char *str)
 {
 	int	sign;
 	int	mount_n;
-	int	i;
 
-	i = 0;
 	mount_n = 0;
 	sign = 1;
-	while (str[i] == '-' || str[i] == '+' || str[i] <= 32 || str[i] == 127)
+	while (isspace(*str))
+		str++;
+	if (*str == '+' && ft_isdigit(*(str + 1)))
+		str++;
+	if (*str == '-')
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		sign = -1;
+		str++;
 	}
-	while (ft_isdigit(str[i]))
+	while (ft_isdigit((int )*str))
 	{
-		mount_n = (mount_n * 10) + (str[i] - 48);
-		i++;
+		mount_n = (mount_n * 10) + (*str - 48);
+		str++;
 	}
 	mount_n *= sign;
 	return (mount_n);
