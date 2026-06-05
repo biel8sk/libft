@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 22:27:11 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/02 20:00:21 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/04 21:28:01 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ int	get_len(int n)
 	int	len;
 
 	len = 1;
+	if (n < 0)
+		len++;
 	while (n > 10)
 	{
 		n /= 10;
@@ -25,13 +27,17 @@ int	get_len(int n)
 	return (len);
 }
 
-void	calc_operations_and_set_char(char *a, int n, int len)
+void	calc_operations_and_set_char(char *a, int n, int len, int is_negative)
 {
 	int	temp;
 	int	power;
 	int	i;
 
 	i = 0;
+	if (is_negative)
+	{
+		*a = '-';
+	}
 	while (len > 0)
 	{
 		temp = n;
@@ -54,10 +60,12 @@ char	*ft_itoa(int n)
 {
 	char	*a;
 	int		len;
+	int		is_negative;
 
+	is_negative = n < 0;
 	len = get_len(n);
-	a = (char *)malloc(len * sizeof(char) + 1);
-	calc_operations_and_set_char(a, n, len);
+	a = (char *)malloc(len + 1);
+	calc_operations_and_set_char(a, n, len, is_negative);
 	return (a);
 }
 // int	main(void)
