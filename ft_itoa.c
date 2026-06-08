@@ -16,10 +16,12 @@ int	get_len(int n)
 {
 	int	len;
 
-	len = 1;
+	len = 2;
 	if (n < 0)
+	{
 		len++;
-	while (n > 10)
+	}
+	while (n > 9 || n < -9)
 	{
 		n /= 10;
 		len ++;
@@ -29,31 +31,36 @@ int	get_len(int n)
 
 void	calc_operations_and_set_char(char *a, int n, int len, int is_negative)
 {
-	int	temp;
-	int	power;
-	int	i;
+	int		c;
+	long	nl;
+	int		i;
 
-	i = 0;
+	nl = (long) n;
+	i = len -1;
+	a[i] = 0;
+	i--;
 	if (is_negative)
 	{
-		*a = '-';
-	}
-	while (len > 0)
-	{
-		temp = n;
-		power = 1;
-		while (temp > 10)
+		a[0] = '-';
+		nl *= -1;
+		while (i > 0)
 		{
-			temp /= 10;
-			power *= 10;
+			c = nl % 10;
+			nl /= 10;
+			c += 48;
+			a[i] = c;
+			i--;
 		}
-		n -= temp * power;
-		temp += 48;
-		a[i] = temp;
-		len--;
-		i++;
+		return ;
 	}
-	a[i] = '\0';
+	while (i >= 0)
+	{
+		c = nl % 10;
+		nl /= 10;
+		c += 48;
+		a[i] = c;
+		i--;
+	}
 }
 
 char	*ft_itoa(int n)
@@ -64,7 +71,7 @@ char	*ft_itoa(int n)
 
 	is_negative = n < 0;
 	len = get_len(n);
-	a = (char *)malloc(len + 1);
+	a = (char *)malloc(len);
 	calc_operations_and_set_char(a, n, len, is_negative);
 	return (a);
 }
