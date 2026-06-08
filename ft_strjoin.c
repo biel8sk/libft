@@ -20,9 +20,11 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	len_1 = ft_strlen(s1);
 	len_2 = ft_strlen(s2);
-	new_str = (char *)malloc((len_1 + len_2 + 1) * sizeof(char));
+	new_str = (char *)malloc((len_1 + len_2 + 1));
+	if (!new_str)
+		return (NULL);
 	new_str[0] = '\0';
-	ft_strlcat(new_str, s1, len_1);
-	ft_strlcat(new_str, s2, len_2);
+	ft_strlcpy(new_str, s1, len_1 + len_2 + 1);
+	ft_strlcat(new_str, s2, len_1 + len_2 + 1);
 	return (new_str);
 }
