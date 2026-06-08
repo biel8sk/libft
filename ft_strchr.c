@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 18:49:09 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:34:56 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/03 18:39:30 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,11 @@ char	*ft_strchr(const char *str, int c)
 {
 	while (*str)
 	{
-		if (*str == c)
+		if (*str == (char) c)
 			return ((char *)str);
 		str++;
 	}
+	if (c == 0)
+		return ((char *)str);
 	return (0);
 }

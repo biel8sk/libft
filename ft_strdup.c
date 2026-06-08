@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 20:40:30 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/05/27 20:48:25 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/05 21:54:51 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *str)
 	char			*new;
 
 	len = ft_strlen(str);
-	new = (char *) malloc(len);
-	ft_strlcpy(new, str, len);
+	new = (char *) malloc(len + 1 * sizeof(char));
+	ft_strlcpy(new, str, len + 1);
 	return (new);
 }

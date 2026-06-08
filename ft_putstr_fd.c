@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/26 18:47:05 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/02 20:25:39 by gpires-c         ###   ########.fr       */
+/*   Created: 2026/06/02 21:34:20 by gpires-c          #+#    #+#             */
+/*   Updated: 2026/06/02 21:37:21 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_tolower(int c)
+#include "libft.h"
+
+void	ft_putstr_fd(char *s, int fd)
 {
-	if (c >= 65 && c <= 90)
-		return (c + 32);
-	return (c);
+	size_t	len;
+
+	len = ft_strlen(s);
+	write(fd, s, len);
 }

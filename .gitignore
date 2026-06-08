@@ -1,1 +1,9 @@
+tests/
+a.out
+tests/
+a.out
 libft_tester/
+*.o
+*.a
+*.ghc
+
