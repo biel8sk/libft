@@ -25,4 +25,6 @@ typedef struct s_assert{
 	void	*value;
 }	t_assert;
 
+
+
 #endif
