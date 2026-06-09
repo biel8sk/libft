@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 22:27:11 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/04 21:28:01 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/08 18:27:05 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,7 @@ void	calc_operations_and_set_char(char *a, int n, int len, int is_negative)
 
 	nl = (long) n;
 	i = len -1;
-	a[i] = 0;
-	i--;
+	a[i--] = 0;
 	if (is_negative)
 	{
 		a[0] = '-';
@@ -47,9 +46,7 @@ void	calc_operations_and_set_char(char *a, int n, int len, int is_negative)
 		{
 			c = nl % 10;
 			nl /= 10;
-			c += 48;
-			a[i] = c;
-			i--;
+			a[i--] = c + 48;
 		}
 		return ;
 	}
@@ -57,9 +54,7 @@ void	calc_operations_and_set_char(char *a, int n, int len, int is_negative)
 	{
 		c = nl % 10;
 		nl /= 10;
-		c += 48;
-		a[i] = c;
-		i--;
+		a[i--] = c + 48;
 	}
 }
 
@@ -75,6 +70,7 @@ char	*ft_itoa(int n)
 	calc_operations_and_set_char(a, n, len, is_negative);
 	return (a);
 }
+
 // int	main(void)
 // {
 // 	#include "stdio.h"
