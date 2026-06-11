@@ -12,69 +12,31 @@
 
 #include "libft.h"
 
-char	*alloc_s(char const *s, char c)
-{
-	size_t	len;
-	char	*str_alloc;
-
-	len = 0;
-	while (*s != c && *s)
-	{
-		len++;
-		s++;
-	}
-	str_alloc = (char *)malloc(len +1);
-	s -= len;
-	while (*s != c && *s)
-	{
-		*str_alloc = *s;
-		str_alloc++;
-		s++;
-	}
-	*str_alloc = 0;
-	return (str_alloc - len);
-}
-
 int	count_words(char const *s, char c)
 {
 	int	count;
 	int	j;
-	int is_t;
+	int	i;
 
 	count = 0;
 	j = 0;
-	is_t = s[j] == c;
+	i = 0;
 	while (s[j])
 	{
-		while (is_t && s[j])
-		{
+		while (s[j] == c && s[j])
 			j++;
-			if (!s[j])
-				break ;
-		}
-		is_t = s[j] != c;
+		i = j;
+		while (s[i] != c && s[i])
+			i++;
+		j = i;
 		count++;
-		j++;
 	}
 	return (count);
-}
-
-static int	calc_len_to_increment(const char *main_str, char *curr_str, int i)
-{
-	size_t	len;
-
-	len = ft_strlen((const char *) curr_str);
-	if (len == ft_strlen(main_str))
-		return (len);
-	if (main_str[len + i])
-		return (len + 1);
-	return (len);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**str_splited;
-	char	*str;
 	int		qnt_words;
 	int		i;
 	int		j;
@@ -83,16 +45,19 @@ char	**ft_split(char const *s, char c)
 	j = 0;
 	qnt_words = count_words(s, c);
 	str_splited = (char **)malloc((sizeof(char *) * (qnt_words + 1)));
+	if (!str_splited)
+		return (NULL);
 	while (s[j])
 	{
 		while (s[j] == c && s[j])
 			j++;
-		str = alloc_s(&s[j], c);
-		j += calc_len_to_increment((const char *)&s[j], str, j);
-		str_splited[i] = str;
-		i++;
+		i = j;
+		while (s[i] != c && s[i])
+			i++;
+		*str_splited++ = ft_substr(s, i - j, i);
+		j = i;
 	}
-	str_splited[i] = 0;
+	*str_splited = 0;
 	return (str_splited);
 }
 
