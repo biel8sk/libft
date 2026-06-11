@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 19:52:48 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/08 21:19:42 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/11 19:55:18 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int	count_words(char const *s, char c)
 	{
 		while (s[j] == c && s[j])
 			j++;
+		if (s[j] == 0)
+			break ;
 		i = j;
 		while (s[i] != c && s[i])
 			i++;
@@ -37,27 +39,30 @@ int	count_words(char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**str_splited;
-	int		qnt_words;
 	int		i;
 	int		j;
+	int		k;
 
 	i = 0;
 	j = 0;
-	qnt_words = count_words(s, c);
-	str_splited = (char **)malloc((sizeof(char *) * (qnt_words + 1)));
+	k = 0;
+	str_splited = (char **)ft_calloc(count_words(s, c) + 1, sizeof(char *));
 	if (!str_splited)
 		return (NULL);
 	while (s[j])
 	{
 		while (s[j] == c && s[j])
 			j++;
+		if (s[j] == 0)
+			break ;
 		i = j;
 		while (s[i] != c && s[i])
 			i++;
-		*str_splited++ = ft_substr(s, i - j, i);
+		str_splited[k] = ft_substr(s, j, i - j);
 		j = i;
+		k++;
 	}
-	*str_splited = 0;
+	str_splited[k] = 0;
 	return (str_splited);
 }
 
