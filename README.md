@@ -1,7 +1,5 @@
 _This project has been created as part of the 42 curriculum by gpires-c_
 
-This project has been created as part of the 42 curriculum by
-
 # Libft
 
 ## Description
@@ -51,6 +49,15 @@ Compile your program along with the library like this
 ```bash
 gcc your_main_file.c -L. -lft -o my_program
 ```
+## Resources
+
+Here is a collection of standard documentation references, tutorials, and materials used during development:
+
+    Linux Man Pages (man3/printf, man3/memset, etc.) — The definitive reference for standard C libraries and system behaviors.
+- <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make</a>
+ - <a href="https://www.gnu.org/software/libc/" target="_blank">Libc</a>
+  - <a href="https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_C_libraries.html" target="_blank">Creating and using libraries in a C program</a>
+
 
 ## IMPLEMENTED FUNCTIONS
 
@@ -158,15 +165,6 @@ typedef struct s_list
     void ft_lstiter(t_list *lst, void (*f)(void *)); — Iterates over the list and applies the function f to the content of each node.
 
     t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *)); — Iterates a list, applies f to the content of each node, and creates a new list from the results.
-
-## Resources
-
-Here is a collection of standard documentation references, tutorials, and materials used during development:
-
-    Linux Man Pages (man3/printf, man3/memset, etc.) — The definitive reference for standard C libraries and system behaviors.
-- <a href="https://www.gnu.org/software/make/" target="_blank">GNU Make</a>
- - <a href="https://www.gnu.org/software/libc/" target="_blank">Libc</a>
-  - <a href="https://www.cs.swarthmore.edu/~newhall/unixhelp/howto_C_libraries.html" target="_blank">Creating and using libraries in a C program</a>
 
 
 ### AI Assistance Reference
