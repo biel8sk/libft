@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 19:24:36 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/12 20:22:01 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 16:27:03 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*p;
 
 	p = *lst;
+	if (!lst || !new)
+		return ;
 	if (!*lst)
 		*lst = new;
 	else

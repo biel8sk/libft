@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/12 20:37:45 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/14 15:08:03 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 16:37:15 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	t_list	*p;
 
 	p = *lst;
-	if (!*lst)
+	if (!lst || !del)
 		return ;
 	while (p->next != NULL)
 	{
