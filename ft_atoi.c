@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 20:19:06 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/08 18:22:54 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 14:44:17 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_atoi(const char *str)
 
 	mount_n = 0;
 	sign = 1;
+	if (!*str)
+		return (mount_n);
 	while (isspace(*str))
 		str++;
 	if (*str == '+' && ft_isdigit(*(str + 1)))

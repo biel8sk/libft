@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/31 19:52:48 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/11 19:55:18 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 13:32:16 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,22 +58,9 @@ char	**ft_split(char const *s, char c)
 		i = j;
 		while (s[i] != c && s[i])
 			i++;
-		str_splited[k] = ft_substr(s, j, i - j);
+		str_splited[k++] = ft_substr(s, j, i - j);
 		j = i;
-		k++;
 	}
 	str_splited[k] = 0;
 	return (str_splited);
 }
-
-// int	main(void)
-// {
-// 	char *str = "skate,or,die";
-
-// 	char **arr_str = ft_split(str, ',');
-// 	#include "stdio.h"
-// 	for (int i =0; i < 3; i++)
-// 	{
-// 		printf("%s ", arr_str[i]);
-// 	}
-// }

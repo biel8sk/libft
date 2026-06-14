@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/27 20:15:07 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/11 20:43:36 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 14:44:29 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,6 @@ int		ft_tolower(int c);
 int		ft_toupper(int c);
 
 /*bonus functions*/
-
 typedef struct s_list
 {
 	void			*content;
@@ -67,6 +66,5 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-
 
 #endif

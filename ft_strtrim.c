@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/30 20:06:23 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/08 18:33:35 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 13:24:28 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,4 +38,3 @@ char	*ft_strtrim(char const *s, char const *set)
 	str_trimmed = ft_substr(s, i, len - i);
 	return (str_trimmed);
 }
-

@@ -6,7 +6,7 @@
 /*   By: gpires-c <gpires-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/26 18:59:16 by gpires-c          #+#    #+#             */
-/*   Updated: 2026/06/04 22:28:59 by gpires-c         ###   ########.fr       */
+/*   Updated: 2026/06/14 13:23:42 by gpires-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 
 	i = 0;
 	j = 0;
-
 	p1 = (unsigned char *) str1;
 	p2 = (unsigned char *) str2;
 	if (n == 0)
